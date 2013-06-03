@@ -9,9 +9,7 @@ We're all upset about that. So...
 
 Right. Now you can. I searched the internet and couldn't find an existing one, to my surprise. I wrote it for you though.
 
-<em>You can skip right to the Code <a href="#deferCode">below</a>, skip to a <a href="http://jsfiddle.net/wilsonhut/fEzcR/" target="_blank">jsfiddle sample</a>, or keep reading for more explanation.</em>
-
-It's almost as simple as my sample code in my <a href="http://wilsonhut.wordpress.com/2013/05/30/the-simplest-explanation-of-jquery-deferred/" title="The simplest explanation of jQuery Deferred" target="_blank">last post explaining the basics of Deferred</a> with the addition of an actual setTimeout... Make a $.Deferred. Call the provided func in a setTimeout, using the provided delay and parameters. After the call to the provided func, call <em>.resolve</em>, and in a catch block, call <em>.reject</em>.
+It's almost as simple as my sample code in <a href="http://wilsonhut.wordpress.com/2013/05/30/the-simplest-explanation-of-jquery-deferred/" title="The simplest explanation of jQuery Deferred" target="_blank">this post explaining the basics of Deferred</a> with the addition of an actual setTimeout... Make a $.Deferred. Call the provided func in a setTimeout, using the provided delay and parameters. After the call to the provided func, call <em>.resolve</em>, and in a catch block, call <em>.reject</em>.
 
 "How do you use it?"
 
@@ -57,7 +55,7 @@ $.defer(function(){
 });
 </pre>
 </li>
-	<li>It's cancel-able.
+	<li>It's cancel-able. (with optional bool parameter to reject/not reject)
 <pre>
 $.defer(function(){
    console.log("Doing work...");

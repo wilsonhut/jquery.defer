@@ -1,4 +1,4 @@
-jquery-defer
+jquery.defer
 ============
 
 "Too bad you can't use window.setTimout and have it implement the jQuery Deferred interface." 

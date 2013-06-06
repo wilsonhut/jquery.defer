@@ -70,4 +70,20 @@ $.defer(function(){
 .fail(function(){
     console.log("This will happen");
 });</pre></li>
+<li>
+You can use it without the function parameter to return a promise that will resolve in [delay] milliseconds
+<pre>
+return $.defer(100);
+</pre>
+
+The delay is optional too. The default delay of 0 (zero) will be used.
+<pre>
+return $.defer(function(){alert("ASYNC!");});
+</pre>
+or
+<pre>
+return $.defer();
+</pre>
+
+</li>
 </ul>

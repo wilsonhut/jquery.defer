@@ -11,20 +11,20 @@
                 clearTimeout(timerId);
                 isCancelled = true;
                 if ((!arguments.length || reject) && deferred.state() === "pending") {
-                    deferred.reject(null, promise, funcArgs);
+                    deferred.rejectWith(null, funcArgs);
                 }
             },
             deferred = $.Deferred(),
             timerId = setTimeout(function () {
-                deferred.notify(promise, funcArgs);
+                deferred.notifyWith(promise, funcArgs);
                 if (isCancelled) {
                     return;
                 }
                 try {
                     var result = func.apply(this, funcArgs);
-                    deferred.resolve(result, promise, funcArgs);
+                    deferred.resolveWith(result, funcArgs);
                 } catch (e) {
-                    deferred.reject(e, promise, funcArgs);
+                    deferred.rejectWith(e, funcArgs);
                 }
             }, delay),
             promise = $.extend(deferred.promise(), {

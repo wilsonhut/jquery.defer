@@ -5,7 +5,7 @@
 		    isFunc = $.isFunction(args[0]),
 		    func = isFunc ? args[0] : $.noop,
 		    delay = (isFunc ? args[1] : args[0]) || 0,
-		    funcArgs = isFunc ? slice.call(args, 2) : [],
+		    funcArgs = slice.call(args, 2),
 		    isCancelled = false,
 		    cancel = function(reject /* = true */) {
 			    clearTimeout(timerId);

@@ -1,6 +1,6 @@
 ;(function($) {
     var slice = Array.prototype.slice;
-	$.defer = function( /*[func] [, delay] [, funcParameters]*/) {
+	$.whereas = function( /*[func] [, delay] [, funcParameters]*/) {
 		var args = arguments,
 		    isFunc = $.isFunction(args[0]),
 		    func = isFunc ? args[0] : $.noop,
